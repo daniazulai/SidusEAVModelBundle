@@ -12,14 +12,14 @@ namespace Sidus\EAVModelBundle\Validator\Constraints;
 
 use Exception;
 use Psr\Log\LoggerInterface;
-use Sidus\BaseBundle\Doctrine\RepositoryFinder;
+use Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder;
 use Sidus\EAVModelBundle\Registry\FamilyRegistry;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Entity\ValueInterface;
 use Sidus\EAVModelBundle\Entity\ValueRepository;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
-use Sidus\BaseBundle\Translator\TranslatableTrait;
-use Sidus\BaseBundle\Validator\Mapping\Loader\BaseLoader;
+use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
+use Sidus\EAVModelBundle\BaseBundle\Validator\Mapping\Loader\BaseLoader;
 use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;

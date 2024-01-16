@@ -11,7 +11,7 @@
 namespace Sidus\EAVModelBundle\Request\ParamConverter;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Sidus\BaseBundle\Request\ParamConverter\AbstractParamConverter;
+use Sidus\EAVModelBundle\BaseBundle\Request\ParamConverter\AbstractParamConverter;
 use Sidus\EAVModelBundle\Registry\AttributeRegistry;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 

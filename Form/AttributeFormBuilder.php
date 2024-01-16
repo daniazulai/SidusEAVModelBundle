@@ -12,8 +12,8 @@ namespace Sidus\EAVModelBundle\Form;
 
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use Sidus\EAVModelBundle\Model\FamilyInterface;
-use Sidus\BaseBundle\Translator\TranslatableTrait;
-use Sidus\BaseBundle\Validator\Mapping\Loader\BaseLoader;
+use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
+use Sidus\EAVModelBundle\BaseBundle\Validator\Mapping\Loader\BaseLoader;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\Options;

@@ -18,7 +18,7 @@ services:
     Sidus\EAVModelBundle\Doctrine\EAVFinder:
         class: Sidus\EAVModelBundle\Doctrine\EAVFinder
         arguments:
-            - '@Sidus\BaseBundle\Doctrine\RepositoryFinder'
+            - '@Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder'
             - '@Sidus\EAVModelBundle\Doctrine\DataLoaderInterface'
 
     Sidus\EAVModelBundle\Doctrine\IntegrityConstraintManager:

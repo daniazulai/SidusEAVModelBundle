@@ -10,7 +10,7 @@
 
 namespace Sidus\EAVModelBundle\Registry;
 
-use Sidus\BaseBundle\Utilities\DebugInfoUtility;
+use Sidus\EAVModelBundle\BaseBundle\Utilities\DebugInfoUtility;
 use Sidus\EAVModelBundle\Exception\AttributeConfigurationException;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use Symfony\Component\Translation\TranslatorInterface;

@@ -11,7 +11,7 @@
 namespace Sidus\EAVModelBundle\Doctrine;
 
 use Doctrine\ORM\PersistentCollection;
-use Sidus\BaseBundle\Doctrine\RepositoryFinder;
+use Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder;
 use Sidus\EAVModelBundle\Entity\ContextualDataInterface;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Entity\ValueInterface;

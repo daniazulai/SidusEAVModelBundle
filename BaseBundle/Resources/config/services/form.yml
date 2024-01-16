@@ -1,0 +1,20 @@
+services:
+    Sidus\EAVModelBundle\Base\Form\Extension\ChoiceTypeExtension:
+        class: Sidus\EAVModelBundle\Base\Form\Extension\ChoiceTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\ChoiceType }
+
+    Sidus\EAVModelBundle\Base\Form\Extension\BubblePreSetDataEventExtension:
+        class: Sidus\EAVModelBundle\Base\Form\Extension\BubblePreSetDataEventExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }
+
+    Sidus\EAVModelBundle\Base\Form\Extension\CollectionTypeExtension:
+        class: Sidus\EAVModelBundle\Base\Form\Extension\CollectionTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\CollectionType }
+
+    Sidus\EAVModelBundle\Base\Form\Extension\BlockPrefixExtension:
+        class: Sidus\EAVModelBundle\Base\Form\Extension\BlockPrefixExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }

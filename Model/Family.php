@@ -10,8 +10,8 @@
 
 namespace Sidus\EAVModelBundle\Model;
 
-use Sidus\BaseBundle\Utilities\DebugInfoUtility;
-use Sidus\BaseBundle\Utilities\SleepUtility;
+use Sidus\EAVModelBundle\BaseBundle\Utilities\DebugInfoUtility;
+use Sidus\EAVModelBundle\BaseBundle\Utilities\SleepUtility;
 use Sidus\EAVModelBundle\Entity\ContextualDataInterface;
 use Sidus\EAVModelBundle\Exception\MissingAttributeException;
 use Sidus\EAVModelBundle\Registry\AttributeRegistry;
@@ -21,7 +21,7 @@ use Sidus\EAVModelBundle\Entity\ContextualValueInterface;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Entity\ValueInterface;
 use Sidus\EAVModelBundle\Exception\MissingFamilyException;
-use Sidus\BaseBundle\Translator\TranslatableTrait;
+use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
 use Symfony\Component\PropertyAccess\Exception\AccessException;
 use Symfony\Component\PropertyAccess\Exception\InvalidArgumentException;
 use Symfony\Component\PropertyAccess\Exception\UnexpectedTypeException;

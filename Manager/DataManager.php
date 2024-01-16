@@ -11,7 +11,7 @@
 namespace Sidus\EAVModelBundle\Manager;
 
 use Doctrine\ORM\QueryBuilder;
-use Sidus\BaseBundle\Doctrine\RepositoryFinder;
+use Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder;
 use Sidus\EAVModelBundle\Doctrine\AttributeQueryBuilderInterface;
 use Sidus\EAVModelBundle\Doctrine\EAVQueryBuilderInterface;
 use Sidus\EAVModelBundle\Entity\DataRepository;

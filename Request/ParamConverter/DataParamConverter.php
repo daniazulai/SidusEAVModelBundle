@@ -12,8 +12,8 @@ namespace Sidus\EAVModelBundle\Request\ParamConverter;
 
 use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Sidus\BaseBundle\Doctrine\RepositoryFinder;
-use Sidus\BaseBundle\Request\ParamConverter\AbstractParamConverter;
+use Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder;
+use Sidus\EAVModelBundle\BaseBundle\Request\ParamConverter\AbstractParamConverter;
 use Sidus\EAVModelBundle\Doctrine\DataLoaderInterface;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Entity\DataRepository;
