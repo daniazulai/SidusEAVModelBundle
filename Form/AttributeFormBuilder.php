@@ -244,13 +244,13 @@ class AttributeFormBuilder implements AttributeFormBuilderInterface
                 'fieldset_options' => [],
             ]
         );
-        $resolver->setAllowedTypes('label', ['NULL', 'string']);
+        $resolver->setAllowedTypes('label', ['null', 'string']);
         $resolver->setAllowedTypes('form_type', ['string']);
         $resolver->setAllowedTypes('hidden', ['boolean']);
         $resolver->setAllowedTypes('merge_form_options', ['boolean']);
         $resolver->setAllowedTypes('multiple', ['boolean']);
         $resolver->setAllowedTypes('form_options', ['array']);
-        $resolver->setAllowedTypes('validation_rules', ['NULL', 'array']);
+        $resolver->setAllowedTypes('validation_rules', ['null', 'array']);
         $resolver->setAllowedTypes('collection_type', ['string']);
         $resolver->setAllowedTypes('ignore_group', ['boolean']);
         $resolver->setAllowedTypes('fieldset_options', ['array']);

@@ -36,8 +36,8 @@ class AllowedFamiliesOptionsConfigurator
             ]
         );
 
-        $resolver->setAllowedTypes('attribute', ['NULL', AttributeInterface::class]);
-        $resolver->setAllowedTypes('allowed_families', ['NULL', 'array']);
+        $resolver->setAllowedTypes('attribute', ['null', AttributeInterface::class]);
+        $resolver->setAllowedTypes('allowed_families', ['null', 'array']);
         $resolver->setNormalizer(
             'allowed_families',
             function (Options $options, $values) {

@@ -145,10 +145,10 @@ class DataType extends AbstractType
                 'fieldset_options' => [],
             ]
         );
-        $resolver->setAllowedTypes('attributes_config', ['NULL', 'array']);
+        $resolver->setAllowedTypes('attributes_config', ['null', 'array']);
         $resolver->setAllowedTypes('merge_attributes_config', ['bool']);
-        $resolver->setAllowedTypes('attribute', ['NULL', AttributeInterface::class]);
-        $resolver->setAllowedTypes('family', ['NULL', 'string', FamilyInterface::class]);
+        $resolver->setAllowedTypes('attribute', ['null', AttributeInterface::class]);
+        $resolver->setAllowedTypes('family', ['null', 'string', FamilyInterface::class]);
         $resolver->setAllowedTypes('fieldset_options', ['array']);
 
         $resolver->setNormalizer(
