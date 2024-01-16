@@ -13,8 +13,13 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * @author Vincent Chalnot <vincent@sidus.fr>
  */
-abstract class LabelTranslationExtension extends AbstractTypeExtension
+class LabelTranslationExtension extends AbstractTypeExtension
 {
+    public static function getExtendedTypes(): iterable
+    {
+        return [FormType::class];
+    }
+
     /**
      * @param FormView      $view
      * @param FormInterface $form
