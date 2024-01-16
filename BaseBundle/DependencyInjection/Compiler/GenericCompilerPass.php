@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\DependencyInjection\Compiler;
+namespace Sidus\EAVModelBundle\BaseBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

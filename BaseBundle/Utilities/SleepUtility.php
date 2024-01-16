@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\Utilities;
+namespace Sidus\EAVModelBundle\BaseBundle\Utilities;
 
 use ReflectionClass;
 use function in_array;

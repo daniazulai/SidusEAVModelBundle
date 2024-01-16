@@ -5,7 +5,7 @@
  * https://github.com/symfony/symfony/issues/8834#issuecomment-330831471
  */
 
-namespace Sidus\EAVModelBundle\Base\Form\Extension;
+namespace Sidus\EAVModelBundle\BaseBundle\Form\Extension;
 
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\FormType;

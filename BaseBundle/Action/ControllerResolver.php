@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\Action;
+namespace Sidus\EAVModelBundle\BaseBundle\Action;
 
 use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;

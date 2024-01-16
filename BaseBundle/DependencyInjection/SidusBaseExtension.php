@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\DependencyInjection;
+namespace Sidus\EAVModelBundle\BaseBundle\DependencyInjection;
 
 use ReflectionClass;
-use Sidus\EAVModelBundle\Base\DependencyInjection\Loader\ServiceLoader;
+use Sidus\EAVModelBundle\BaseBundle\DependencyInjection\Loader\ServiceLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use function dirname;

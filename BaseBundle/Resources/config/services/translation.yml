@@ -1,7 +1,7 @@
 services:
-    Sidus\EAVModelBundle\Base\Translator\TranslatorDecorator:
-        class: Sidus\EAVModelBundle\Base\Translator\TranslatorDecorator
+    Sidus\EAVModelBundle\BaseBundle\Translator\TranslatorDecorator:
+        class: Sidus\EAVModelBundle\BaseBundle\Translator\TranslatorDecorator
         public: false
         decorates: translator
         arguments:
-            - '@Sidus\EAVModelBundle\Base\Translator\TranslatorDecorator.inner'
+            - '@Sidus\EAVModelBundle\BaseBundle\Translator\TranslatorDecorator.inner'

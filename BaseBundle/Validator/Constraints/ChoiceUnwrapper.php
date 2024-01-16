@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\Validator\Constraints;
+namespace Sidus\EAVModelBundle\BaseBundle\Validator\Constraints;
 
 /**
  * Allows to input the same kind of data in a choice validator than in a ChoiceType (unwrap choice groups)

@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\Validator\Mapping\Loader;
+namespace Sidus\EAVModelBundle\BaseBundle\Validator\Mapping\Loader;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Exception\MappingException;

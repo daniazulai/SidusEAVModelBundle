@@ -1,8 +1,8 @@
 services:
-    Sidus\EAVModelBundle\Base\Action\ControllerResolver:
-        class: Sidus\EAVModelBundle\Base\Action\ControllerResolver
+    Sidus\EAVModelBundle\BaseBundle\Action\ControllerResolver:
+        class: Sidus\EAVModelBundle\BaseBundle\Action\ControllerResolver
         decorates: controller_resolver
         public: false
         arguments:
             - '@service_container'
-            - '@Sidus\EAVModelBundle\Base\Action\ControllerResolver.inner'
+            - '@Sidus\EAVModelBundle\BaseBundle\Action\ControllerResolver.inner'

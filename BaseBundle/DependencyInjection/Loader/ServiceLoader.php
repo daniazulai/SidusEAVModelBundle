@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\Base\DependencyInjection\Loader;
+namespace Sidus\EAVModelBundle\BaseBundle\DependencyInjection\Loader;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
