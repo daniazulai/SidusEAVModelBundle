@@ -13,7 +13,7 @@ namespace Sidus\EAVModelBundle\Serializer\Denormalizer;
 use ArrayAccess;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use InvalidArgumentException;

@@ -14,7 +14,7 @@ use Sidus\DataGridBundle\Renderer\ColumnValueRendererInterface;
 use Sidus\DataGridBundle\Renderer\RenderableInterface;
 use Sidus\DataGridBundle\Model\Column;
 use Sidus\EAVModelBundle\Entity\DataInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * This abstraction layer is only used for backward compatibility between v1.3 and v2.0 of the Sidus/DataGridBundle
@@ -36,7 +36,7 @@ abstract class AbstractColumnValueRenderer
      * @param mixed $value
      * @param array $options
      *
-     * @throws \Symfony\Component\Translation\Exception\InvalidArgumentException
+     * @throws \Symfony\Contracts\Translation\Exception\InvalidArgumentException
      *
      * @return string
      */

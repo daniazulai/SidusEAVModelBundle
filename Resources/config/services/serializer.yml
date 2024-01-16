@@ -20,6 +20,6 @@ services:
     Sidus\EAVModelBundle\Serializer\EntityProvider:
         class: Sidus\EAVModelBundle\Serializer\EntityProvider
         arguments:
-            - '@Doctrine\Common\Persistence\ManagerRegistry'
+            - '@Doctrine\Persistence\ManagerRegistry'
         tags:
             - { name: doctrine.event_listener, event: onFlush }

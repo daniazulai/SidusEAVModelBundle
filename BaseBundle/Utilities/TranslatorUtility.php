@@ -11,7 +11,7 @@
 namespace Sidus\EAVModelBundle\BaseBundle\Utilities;
 
 use InvalidArgumentException;
-use Symfony\Component\Translation\TranslatorBagInterface;
+use Symfony\Contracts\Translation\TranslatorBagInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**

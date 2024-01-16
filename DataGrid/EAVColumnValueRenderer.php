@@ -11,7 +11,7 @@
 namespace Sidus\EAVModelBundle\DataGrid;
 
 use Sidus\DataGridBundle\Renderer\ColumnValueRendererInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Overrides base renderer for Sidus/DataGridBundle v2.0

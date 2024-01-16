@@ -11,7 +11,7 @@
 namespace Sidus\EAVModelBundle\Serializer;
 
 use ArrayAccess;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Event\OnFlushEventArgs;

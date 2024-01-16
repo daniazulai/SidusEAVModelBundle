@@ -20,7 +20,7 @@ use Sidus\EAVModelBundle\Entity\ValueRepository;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
 use Sidus\EAVModelBundle\BaseBundle\Validator\Mapping\Loader\BaseLoader;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\ConstraintViolation;
@@ -298,7 +298,7 @@ class DataValidator extends ConstraintValidator
      * @param AttributeInterface $attribute
      * @param string             $type
      *
-     * @throws \Symfony\Component\Translation\Exception\InvalidArgumentException
+     * @throws \Symfony\Contracts\Translation\Exception\InvalidArgumentException
      *
      * @return string
      */

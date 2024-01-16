@@ -10,7 +10,7 @@
 
 namespace Sidus\EAVModelBundle\Cache;
 
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\MappingException;
 use Sidus\EAVModelBundle\Registry\FamilyRegistry;

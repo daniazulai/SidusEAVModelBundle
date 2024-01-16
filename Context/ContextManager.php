@@ -17,7 +17,7 @@ use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\OptionsResolver\Exception\InvalidOptionsException;
 use Symfony\Component\VarDumper\Caster\Caster;
 
@@ -147,11 +147,11 @@ class ContextManager implements ContextManagerInterface
     /**
      * Global hook checking if context form was submitted because the context form can appear on any page
      *
-     * @param GetResponseEvent $event
+     * @param RequestEvent $event
      *
      * @throws \InvalidArgumentException
      */
-    public function onKernelRequest(GetResponseEvent $event)
+    public function onKernelRequest(RequestEvent $event)
     {
         $request = $event->getRequest();
         $this->requestUri = $request->getRequestUri();

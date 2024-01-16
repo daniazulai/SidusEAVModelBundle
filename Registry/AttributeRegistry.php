@@ -13,7 +13,7 @@ namespace Sidus\EAVModelBundle\Registry;
 use Sidus\EAVModelBundle\BaseBundle\Utilities\DebugInfoUtility;
 use Sidus\EAVModelBundle\Exception\AttributeConfigurationException;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\VarDumper\Caster\Caster;
 use UnexpectedValueException;
 use function in_array;

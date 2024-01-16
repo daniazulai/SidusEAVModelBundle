@@ -12,8 +12,8 @@ namespace Sidus\EAVModelBundle\DataGrid;
 
 use Sidus\DataGridBundle\Model\Column;
 use Sidus\DataGridBundle\Renderer\ColumnRendererInterface;
-use Symfony\Component\Translation\TranslatorBagInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorBagInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Overriding base column label rendering for Sidus/DataGridBundle v1.3
@@ -45,7 +45,7 @@ class EAVColumnRenderer implements ColumnRendererInterface
     /**
      * @param Column $column
      *
-     * @throws \Symfony\Component\Translation\Exception\InvalidArgumentException
+     * @throws \Symfony\Contracts\Translation\Exception\InvalidArgumentException
      * @throws \Sidus\EAVModelBundle\Exception\MissingAttributeException
      *
      * @return string

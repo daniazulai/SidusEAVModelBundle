@@ -5,7 +5,7 @@ services:
         arguments:
             - '%sidus_eav_model.entity.data.class%'
             - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
-            - '@Symfony\Component\Translation\TranslatorInterface'
+            - '@Symfony\Contracts\Translation\TranslatorInterface'
             - '@Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder'
             - '@Psr\Log\LoggerInterface'
         tags:

@@ -1,4 +1,9 @@
 services:
+    Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder:
+        class: Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder
+        arguments:
+            - '@Doctrine\Persistence\ManagerRegistry'
+
     Sidus\EAVModelBundle\Doctrine\EAVFinder:
         class: Sidus\EAVModelBundle\Doctrine\EAVFinder
         arguments:
@@ -8,4 +13,4 @@ services:
     Sidus\EAVModelBundle\Doctrine\IntegrityConstraintManager:
         class: Sidus\EAVModelBundle\Doctrine\IntegrityConstraintManager
         arguments:
-            - '@Doctrine\Common\Persistence\ManagerRegistry'
+            - '@Doctrine\Persistence\ManagerRegistry'

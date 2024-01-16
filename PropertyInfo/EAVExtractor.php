@@ -15,7 +15,7 @@ use ReflectionException;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use UnexpectedValueException;
 use function array_key_exists;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 use function count;
 use function in_array;
 use function is_a;

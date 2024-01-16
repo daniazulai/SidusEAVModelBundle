@@ -3,7 +3,7 @@ services:
         class: Sidus\EAVModelBundle\Command\FixDataDiscriminatorsCommand
         arguments:
             - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
-            - '@Doctrine\Common\Persistence\ManagerRegistry'
+            - '@Doctrine\Persistence\ManagerRegistry'
         tags:
             - { name: console.command }
 
@@ -11,7 +11,7 @@ services:
         class: Sidus\EAVModelBundle\Command\PurgeOrphanDataCommand
         arguments:
             - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
-            - '@Doctrine\Common\Persistence\ManagerRegistry'
+            - '@Doctrine\Persistence\ManagerRegistry'
             - '%sidus_eav_model.entity.data.class%'
             - '%sidus_eav_model.entity.value.class%'
         tags:

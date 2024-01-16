@@ -4,7 +4,7 @@ services:
         public: false
         arguments:
             - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
-            - '@Doctrine\Common\Persistence\ManagerRegistry'
+            - '@Doctrine\Persistence\ManagerRegistry'
             - '%kernel.root_dir%/../var'
         tags:
             - { name: kernel.cache_warmer, priority: 0 }

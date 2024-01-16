@@ -12,7 +12,7 @@ namespace Sidus\EAVModelBundle\Twig;
 
 use Sidus\EAVModelBundle\Registry\FamilyRegistry;
 use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig_Extension;
 use Twig_SimpleFunction;
 

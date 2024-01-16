@@ -10,7 +10,7 @@
 
 namespace Sidus\EAVModelBundle\Form\Type;
 
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 use Sidus\EAVModelBundle\Form\AllowedFamiliesOptionsConfigurator;
