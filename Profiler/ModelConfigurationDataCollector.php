@@ -53,9 +53,9 @@ class ModelConfigurationDataCollector extends DataCollector
      *
      * @param Request         $request
      * @param Response        $response
-     * @param \Exception|null $exception
+     * @param \Throwable|null $exception
      */
-    public function collect(Request $request, Response $response, \Exception $exception = null)
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
         foreach ($this->familyRegistry->getFamilies() as $family) {
             $this->data['families'][$family->getCode()] = $this->parseFamily($family);

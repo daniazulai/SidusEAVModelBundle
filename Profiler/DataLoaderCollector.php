@@ -36,7 +36,7 @@ class DataLoaderCollector extends DataCollector
     /**
      * @inheritDoc
      */
-    public function collect(Request $request, Response $response, \Exception $exception = null)
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
         $this->data['count'] = count(CollectedDataNode::getIndex());
         $this->data['valuesCount'] = CollectedDataNode::getValuesCount();

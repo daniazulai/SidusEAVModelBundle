@@ -25,7 +25,7 @@ class QueryBuilderCollector extends DataCollector
     /**
      * @inheritDoc
      */
-    public function collect(Request $request, Response $response, \Exception $exception = null)
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
         foreach (EAVQueryBuilder::getQueryBuilders() as $queryBuilder) {
             $this->data['query_builders'][] = $this->parseQueryBuilder($queryBuilder);

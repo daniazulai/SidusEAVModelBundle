@@ -13,7 +13,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * @author Vincent Chalnot <vincent@sidus.fr>
  */
-class LabelTranslationExtension extends AbstractTypeExtension
+abstract class LabelTranslationExtension extends AbstractTypeExtension
 {
     /**
      * @param FormView      $view
