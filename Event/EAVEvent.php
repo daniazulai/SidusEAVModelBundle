@@ -16,7 +16,7 @@ use Doctrine\ORM\UnitOfWork;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Entity\ValueInterface;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * This event is triggered when a change occurred to an EAV Data entity or one of it's values

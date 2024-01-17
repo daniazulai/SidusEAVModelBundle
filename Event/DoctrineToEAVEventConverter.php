@@ -18,7 +18,7 @@ use Doctrine\ORM\Events;
 use Psr\Log\LoggerInterface;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Entity\ValueInterface;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Listens to Doctrine events and convert them to EAVEvents
