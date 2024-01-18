@@ -24,11 +24,3 @@ services:
             - '@logger'
         tags:
             - { name: doctrine.event_subscriber }
-
-    Sidus\EAVModelBundle\Event\RelationalAttributesUpdaterListener:
-        public: false
-        arguments:
-            - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
-            - '%sidus_eav_model.entity.data.class%'
-        tags:
-            - { name: kernel.event_listener, event: sidus.eav_data }

@@ -123,7 +123,7 @@ class DoctrineToEAVEventConverter implements EventSubscriber
             $data = $this->eavEvents->current();
             $eavEvent = $this->eavEvents->offsetGet($data);
             $this->eavEvents->offsetUnset($data);
-            $this->eventDispatcher->dispatch('sidus.eav_data', $eavEvent);
+            $this->eventDispatcher->dispatch($eavEvent);
         }
 
         $this->fixMissingEntityInsertionChangeSets($args->getEntityManager());

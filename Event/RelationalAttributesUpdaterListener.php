@@ -14,6 +14,7 @@ use Sidus\EAVModelBundle\Entity\DataRepository;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use Sidus\EAVModelBundle\Registry\FamilyRegistry;
+use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 
 /**
  * Maintains a bidirectional relation between two attributes from different families, listens to child data changes and
@@ -21,6 +22,7 @@ use Sidus\EAVModelBundle\Registry\FamilyRegistry;
  *
  * @author Vincent Chalnot <vincent@sidus.fr>
  */
+#[AsEventListener(event: EAVEvent::class, method: 'onSidusEavData')]
 class RelationalAttributesUpdaterListener
 {
     /** @var FamilyRegistry */
