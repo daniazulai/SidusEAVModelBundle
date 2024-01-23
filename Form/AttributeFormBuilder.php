@@ -29,16 +29,9 @@ class AttributeFormBuilder implements AttributeFormBuilderInterface
 {
     use TranslatableTrait;
 
-    /** @var string */
-    protected $collectionType;
-
-    /**
-     * @param string $collectionType
-     */
-    public function __construct($collectionType)
-    {
-        $this->collectionType = $collectionType;
-    }
+    public function __construct(
+        private string $collectionType
+    ) {}
 
     /**
      * @param FormBuilderInterface $builder

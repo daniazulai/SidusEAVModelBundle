@@ -40,7 +40,7 @@ class BaseLoader extends YamlFileLoader
      *
      * @return bool Whether the loader succeeded
      */
-    public function loadClassMetadata(ClassMetadata $metadata)
+    public function loadClassMetadata(ClassMetadata $metadata): bool
     {
         return false; // throw an exception ?
     }

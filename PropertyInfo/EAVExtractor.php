@@ -59,7 +59,7 @@ class EAVExtractor extends DoctrineExtractor implements PropertyAccessExtractorI
         if (!$entityManager) {
             throw new UnexpectedValueException("No manager found for class {$dataClass}");
         }
-        parent::__construct($entityManager->getMetadataFactory());
+        parent::__construct($entityManager);
     }
 
     /**
@@ -67,7 +67,7 @@ class EAVExtractor extends DoctrineExtractor implements PropertyAccessExtractorI
      *
      * @throws ReflectionException
      */
-    public function getProperties($class, array $context = [])
+    public function getProperties(string $class, array $context = []): ?array
     {
         if (!is_a($class, DataInterface::class, true)) {
             return null;
@@ -91,7 +91,7 @@ class EAVExtractor extends DoctrineExtractor implements PropertyAccessExtractorI
      *
      * @throws ReflectionException
      */
-    public function getTypes($class, $property, array $context = [])
+    public function getTypes(string $class, string $property, array $context = []): ?array
     {
         if (!is_a($class, DataInterface::class, true)) {
             return null;
@@ -149,7 +149,7 @@ class EAVExtractor extends DoctrineExtractor implements PropertyAccessExtractorI
      *
      * @throws ReflectionException
      */
-    public function isReadable($class, $property, array $context = [])
+    public function isReadable(string $class, string $property, array $context = []): ?bool
     {
         if (!is_a($class, DataInterface::class, true)) {
             return null;
@@ -168,7 +168,7 @@ class EAVExtractor extends DoctrineExtractor implements PropertyAccessExtractorI
      *
      * @throws ReflectionException
      */
-    public function isWritable($class, $property, array $context = [])
+    public function isWritable(string $class, string $property, array $context = []): ?bool
     {
         if (!is_a($class, DataInterface::class, true)) {
             return null;

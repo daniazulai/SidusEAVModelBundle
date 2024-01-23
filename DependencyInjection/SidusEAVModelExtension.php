@@ -68,7 +68,6 @@ class SidusEAVModelExtension extends Extension
         $loader->load('command.yml');
         $loader->load('configuration.yml');
         $loader->load('context.yml');
-        $loader->load('deprecated.yml');
         $loader->load('doctrine.yml');
         $loader->load('entities.yml');
         $loader->load('events.yml');
@@ -84,7 +83,6 @@ class SidusEAVModelExtension extends Extension
             $loader->load('serializer.yml');
             $loader->load('normalizer.yml');
             $loader->load('denormalizer.yml');
-            $loader->load('deprecated_serializer.yml');
         }
 
         // The DatagridBundle might be installed
