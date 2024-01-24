@@ -27,7 +27,7 @@ services:
         arguments:
             - '@Sidus\EAVModelBundle\Form\AttributeFormBuilderInterface'
             - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
-            - '@Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder'
+            - '@Sidus\EAVModelBundle\Doctrine\RepositoryFinder'
         tags:
             - { name: form.type }
 

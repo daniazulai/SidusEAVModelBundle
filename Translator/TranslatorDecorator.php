@@ -1,6 +1,6 @@
 <?php
 
-namespace Sidus\EAVModelBundle\BaseBundle\Translator;
+namespace Sidus\EAVModelBundle\Translator;
 
 use Symfony\Contracts\Translation\Exception\InvalidArgumentException;
 use Symfony\Contracts\Translation\MessageCatalogueInterface;

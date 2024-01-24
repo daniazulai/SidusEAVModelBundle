@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\BaseBundle\Utilities;
+namespace Sidus\EAVModelBundle\Utilities;
 
 use InvalidArgumentException;
 use Symfony\Contracts\Translation\TranslatorBagInterface;

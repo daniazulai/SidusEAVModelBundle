@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\BaseBundle\Request\ParamConverter;
+namespace Sidus\EAVModelBundle\Request\ParamConverter;
 
 use InvalidArgumentException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;

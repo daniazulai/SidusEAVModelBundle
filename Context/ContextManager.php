@@ -11,8 +11,8 @@
 namespace Sidus\EAVModelBundle\Context;
 
 use Psr\Log\LoggerInterface;
-use Sidus\EAVModelBundle\BaseBundle\Utilities\DebugInfoUtility;
-use Sidus\EAVModelBundle\BaseBundle\Utilities\SleepUtility;
+use Sidus\EAVModelBundle\Utilities\DebugInfoUtility;
+use Sidus\EAVModelBundle\Utilities\SleepUtility;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;

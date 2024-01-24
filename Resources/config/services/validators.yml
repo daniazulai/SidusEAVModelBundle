@@ -6,7 +6,7 @@ services:
             - '%sidus_eav_model.entity.data.class%'
             - '@Sidus\EAVModelBundle\Registry\FamilyRegistry'
             - '@Symfony\Contracts\Translation\TranslatorInterface'
-            - '@Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder'
+            - '@Sidus\EAVModelBundle\Doctrine\RepositoryFinder'
             - '@Psr\Log\LoggerInterface'
         tags:
             - { name: validator.constraint_validator }

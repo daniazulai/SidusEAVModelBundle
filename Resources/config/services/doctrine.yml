@@ -1,13 +1,13 @@
 services:
-    Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder:
-        class: Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder
+    Sidus\EAVModelBundle\Doctrine\RepositoryFinder:
+        class: Sidus\EAVModelBundle\Doctrine\RepositoryFinder
         arguments:
             - '@Doctrine\Persistence\ManagerRegistry'
 
     Sidus\EAVModelBundle\Doctrine\EAVFinder:
         class: Sidus\EAVModelBundle\Doctrine\EAVFinder
         arguments:
-            - '@Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder'
+            - '@Sidus\EAVModelBundle\Doctrine\RepositoryFinder'
             - '@Sidus\EAVModelBundle\Doctrine\DataLoaderInterface'
 
     Sidus\EAVModelBundle\Doctrine\IntegrityConstraintManager:

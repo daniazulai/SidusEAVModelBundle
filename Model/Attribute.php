@@ -10,13 +10,13 @@
 
 namespace Sidus\EAVModelBundle\Model;
 
-use Sidus\EAVModelBundle\BaseBundle\Utilities\DebugInfoUtility;
-use Sidus\EAVModelBundle\BaseBundle\Utilities\SleepUtility;
+use Sidus\EAVModelBundle\Utilities\DebugInfoUtility;
+use Sidus\EAVModelBundle\Utilities\SleepUtility;
 use Sidus\EAVModelBundle\Registry\AttributeTypeRegistry;
 use Sidus\EAVModelBundle\Entity\ContextualValueInterface;
 use Sidus\EAVModelBundle\Exception\AttributeConfigurationException;
 use Sidus\EAVModelBundle\Exception\ContextException;
-use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
+use Sidus\EAVModelBundle\Translator\TranslatableTrait;
 use Symfony\Component\VarDumper\Caster\Caster;
 
 /**

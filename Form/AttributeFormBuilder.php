@@ -12,7 +12,7 @@ namespace Sidus\EAVModelBundle\Form;
 
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use Sidus\EAVModelBundle\Model\FamilyInterface;
-use Sidus\EAVModelBundle\BaseBundle\Translator\TranslatableTrait;
+use Sidus\EAVModelBundle\Translator\TranslatableTrait;
 use Sidus\EAVModelBundle\BaseBundle\Validator\Mapping\Loader\BaseLoader;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormBuilderInterface;

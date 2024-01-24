@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Sidus\EAVModelBundle\BaseBundle\Translator;
+namespace Sidus\EAVModelBundle\Translator;
 
-use Sidus\EAVModelBundle\BaseBundle\Utilities\TranslatorUtility;
+use Sidus\EAVModelBundle\Utilities\TranslatorUtility;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**

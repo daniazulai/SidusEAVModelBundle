@@ -10,7 +10,7 @@
 
 namespace Sidus\EAVModelBundle\Form\Type;
 
-use Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder;
+use Sidus\EAVModelBundle\Doctrine\RepositoryFinder;
 use Sidus\EAVModelBundle\Entity\DataRepository;
 use Sidus\EAVModelBundle\Form\AttributeFormBuilderInterface;
 use Sidus\EAVModelBundle\Model\AttributeInterface;

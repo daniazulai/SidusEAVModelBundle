@@ -14,7 +14,7 @@ use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Sidus\EAVModelBundle\Exception\ContextException;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
-use Sidus\EAVModelBundle\BaseBundle\Utilities\DateTimeUtility;
+use Sidus\EAVModelBundle\Utilities\DateTimeUtility;
 
 /**
  * Base class for storing values in the EAV model

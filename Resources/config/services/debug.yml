@@ -19,4 +19,4 @@ services:
     Sidus\EAVModelBundle\Doctrine\OptimizedDataLoader:
         class: Sidus\EAVModelBundle\Doctrine\Debug\DebugDataLoader
         arguments:
-            - '@Sidus\EAVModelBundle\BaseBundle\Doctrine\RepositoryFinder'
+            - '@Sidus\EAVModelBundle\Doctrine\RepositoryFinder'

@@ -10,8 +10,7 @@
 
 namespace Sidus\EAVModelBundle;
 
-use Sidus\EAVModelBundle\BaseBundle\DependencyInjection\Compiler\GenericCompilerPass;
-use Sidus\EAVModelBundle\DependencyInjection\DebugCompilerPass;
+use Sidus\EAVModelBundle\DependencyInjection\GenericCompilerPass;
 use Sidus\EAVModelBundle\Registry\AttributeRegistry;
 use Sidus\EAVModelBundle\Registry\AttributeTypeRegistry;
 use Sidus\EAVModelBundle\Registry\FamilyRegistry;
