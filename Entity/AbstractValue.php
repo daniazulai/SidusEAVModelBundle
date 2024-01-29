@@ -11,6 +11,7 @@
 namespace Sidus\EAVModelBundle\Entity;
 
 use DateTime;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sidus\EAVModelBundle\Exception\ContextException;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
@@ -30,6 +31,9 @@ abstract class AbstractValue implements ContextualValueInterface
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
+    #[ORM\Id]
+    #[ORM\Column(name: 'id', type: 'integer')]
+    #[ORM\GeneratedValue(strategy: 'AUTO')]
     protected $id;
 
     /**
@@ -38,6 +42,8 @@ abstract class AbstractValue implements ContextualValueInterface
      * @ORM\ManyToOne(targetEntity="Sidus\EAVModelBundle\Entity\DataInterface", inversedBy="values", fetch="EAGER")
      * @ORM\JoinColumn(name="data_id", referencedColumnName="id", onDelete="cascade")
      */
+    #[ORM\ManyToOne(targetEntity: DataInterface::class, fetch: 'EAGER', inversedBy: 'values')]
+    #[ORM\JoinColumn(name: 'data_id', referencedColumnName: 'id', onDelete: 'cascade')]
     protected $data;
 
     /**
@@ -47,6 +53,8 @@ abstract class AbstractValue implements ContextualValueInterface
      *                                                                 fetch="EAGER", cascade={"persist", "detach"})
      * @ORM\JoinColumn(name="data_value_id", referencedColumnName="id", onDelete="cascade", nullable=true)
      */
+    #[ORM\ManyToOne(targetEntity: DataInterface::class, cascade: ['persist', 'detach'], fetch: 'EAGER', inversedBy: 'refererValues')]
+    #[ORM\JoinColumn(name: 'data_value_id', referencedColumnName: 'id', nullable: true, onDelete: 'cascade')]
     protected $dataValue;
 
     /**
@@ -57,6 +65,8 @@ abstract class AbstractValue implements ContextualValueInterface
      * @ORM\ManyToOne(targetEntity="Sidus\EAVModelBundle\Entity\DataInterface", cascade={"persist"}, fetch="EAGER")
      * @ORM\JoinColumn(name="constrained_data_value_id", referencedColumnName="id", nullable=true)
      */
+    #[ORM\ManyToOne(targetEntity: DataInterface::class, cascade: ['persist'], fetch: 'EAGER')]
+    #[ORM\JoinColumn(name: 'constrained_data_value_id', referencedColumnName: 'id', nullable: true)]
     protected $constrainedDataValue;
 
     /**
@@ -64,6 +74,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="attribute_code", type="string", length=255)
      */
+    #[ORM\Column(name: 'attribute_code', type: Types::STRING, length: 255)]
     protected $attributeCode;
 
     /**
@@ -73,6 +84,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="family_code", type="string", length=255)
      */
+    #[ORM\Column(name: 'family_code', type: Types::STRING, length: 255)]
     protected $familyCode;
 
     /**
@@ -80,6 +92,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="position", type="integer", nullable=true)
      */
+    #[ORM\Column(name: 'position', type: Types::INTEGER, nullable: true)]
     protected $position;
 
     /**
@@ -87,6 +100,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="bool_value", type="boolean", nullable=true)
      */
+    #[ORM\Column(name: 'bool_value', type: Types::BOOLEAN, nullable: true)]
     protected $boolValue;
 
     /**
@@ -94,6 +108,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="integer_value", type="integer", nullable=true)
      */
+    #[ORM\Column(name: 'integer_value', type: Types::INTEGER, nullable: true)]
     protected $integerValue;
 
     /**
@@ -101,6 +116,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="decimal_value", type="float", nullable=true)
      */
+    #[ORM\Column(name: 'decimal_value', type: Types::FLOAT, nullable: true)]
     protected $decimalValue;
 
     /**
@@ -108,6 +124,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="date_value", type="date", nullable=true)
      */
+    #[ORM\Column(name: 'date_value', type: Types::DATE_MUTABLE, nullable: true)]
     protected $dateValue;
 
     /**
@@ -115,6 +132,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="datetime_value", type="datetime", nullable=true)
      */
+    #[ORM\Column(name: 'datetime_value', type: Types::DATETIME_MUTABLE, nullable: true)]
     protected $datetimeValue;
 
     /**
@@ -122,6 +140,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="string_value", type="string", length=255, nullable=true)
      */
+    #[ORM\Column(name: 'string_value', type: Types::STRING, length: 255, nullable: true)]
     protected $stringValue;
 
     /**
@@ -129,6 +148,7 @@ abstract class AbstractValue implements ContextualValueInterface
      *
      * @ORM\Column(name="text_value", type="text", nullable=true)
      */
+    #[ORM\Column(name: 'text_value', type: Types::TEXT, nullable: true)]
     protected $textValue;
 
     /**

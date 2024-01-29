@@ -14,6 +14,7 @@ use BadMethodCallException;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Exception;
 use LogicException;
@@ -57,6 +58,9 @@ abstract class AbstractData implements ContextualDataInterface
      * @ORM\Column(name="id", type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
+    #[ORM\Id]
+    #[ORM\Column(name: 'id', type: 'integer')]
+    #[ORM\GeneratedValue(strategy: 'AUTO')]
     protected $id;
 
     /**
@@ -66,6 +70,8 @@ abstract class AbstractData implements ContextualDataInterface
      *                                                    cascade={"all"}, orphanRemoval=true)
      * @ORM\OrderBy({"position" = "ASC"})
      */
+    #[ORM\OneToMany(mappedBy: 'data', targetEntity: ValueInterface::class, cascade: ["all"], orphanRemoval: true)]
+    #[ORM\OrderBy(['position' => 'ASC'])]
     protected $values;
 
     /**
@@ -74,6 +80,7 @@ abstract class AbstractData implements ContextualDataInterface
      * @ORM\OneToMany(targetEntity="Sidus\EAVModelBundle\Entity\ValueInterface", cascade={"persist"},
      *                                                                           mappedBy="dataValue")
      */
+    #[ORM\OneToMany(mappedBy: 'dataValue', targetEntity: ValueInterface::class, cascade: ['persist'])]
     protected $refererValues;
 
     /**
@@ -81,6 +88,7 @@ abstract class AbstractData implements ContextualDataInterface
      *
      * @ORM\Column(name="created_at", type="datetime")
      */
+    #[ORM\Column(name: 'created_at', type: Types::DATETIME_MUTABLE)]
     protected $createdAt;
 
     /**
@@ -88,6 +96,7 @@ abstract class AbstractData implements ContextualDataInterface
      *
      * @ORM\Column(name="updated_at", type="datetime")
      */
+    #[ORM\Column(name: 'updated_at', type: Types::DATETIME_MUTABLE)]
     protected $updatedAt;
 
     /**
@@ -95,6 +104,7 @@ abstract class AbstractData implements ContextualDataInterface
      *
      * @ORM\Column(name="family_code", type="sidus_family", length=255)
      */
+    #[ORM\Column(name: 'family_code', type: 'sidus_family', length: 255)]
     protected $family;
 
     /**
@@ -1072,7 +1082,7 @@ abstract class AbstractData implements ContextualDataInterface
     protected function setInternalValueData(
         AttributeInterface $attribute,
         ValueInterface $value,
-        $dataValue
+                           $dataValue
     ) {
         $value->setValueData($dataValue);
     }
