@@ -125,7 +125,7 @@ class ModelConfigurationDataCollector extends DataCollector
             'dataClass' => $family->getDataClass(),
             'valueClass' => $family->getValueClass(),
             'attributeAsIdentifier' => $this->parseAttribute($family->getAttributeAsIdentifier()),
-            'attributeAsLabel' => $this->parseAttribute($family->getAttributeAsLabel()),
+            'attributeAsLabel' => $this->parseAttribute($family->getAttributeAsLabel()[0]),
             'attributes' => array_map([$this, 'parseAttribute'], $family->getAttributes()),
             'data_class' => $family->getDataClass(),
         ];

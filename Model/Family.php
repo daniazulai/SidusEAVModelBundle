@@ -50,8 +50,8 @@ class Family implements FamilyInterface
     /** @var string */
     protected $label;
 
-    /** @var AttributeInterface */
-    protected $attributeAsLabel;
+    /** @var array|AttributeInterface[] */
+    protected $attributeAsLabel = [];
 
     /** @var AttributeInterface */
     protected $attributeAsIdentifier;
@@ -133,14 +133,17 @@ class Family implements FamilyInterface
         $this->buildAttributes($attributeRegistry, $config);
         unset($config['attributes']);
 
-        if (!empty($config['attributeAsLabel'])) {
+        if (count($config['attributeAsLabel'])) {
             $labelCode = $config['attributeAsLabel'];
-            if (!$this->hasAttribute($labelCode)) {
-                $message = "Bad configuration for family {$code}: attribute as label '{$labelCode}'";
-                $message .= " doesn't exists for this family";
-                throw new UnexpectedValueException($message);
+
+            foreach ($labelCode as $labelCodeValue) {
+                if (!$this->hasAttribute($labelCodeValue)) {
+                    $message = "Bad configuration for family {$code}: attribute as label '{$labelCodeValue}'";
+                    $message .= " doesn't exists for this family";
+                    throw new UnexpectedValueException($message);
+                }
+                $this->attributeAsLabel[] = $this->getAttribute($labelCodeValue);
             }
-            $this->attributeAsLabel = $this->getAttribute($labelCode);
         }
         unset($config['attributeAsLabel']);
 
@@ -179,19 +182,19 @@ class Family implements FamilyInterface
     }
 
     /**
-     * @return AttributeInterface
+     * @return array|AttributeInterface[]
      */
-    public function getAttributeAsLabel()
+    public function getAttributeAsLabel(): array
     {
         return $this->attributeAsLabel;
     }
 
     /**
-     * @param AttributeInterface $attributeAsLabel
+     * @param array|AttributeInterface[] $attributes
      */
-    public function setAttributeAsLabel(AttributeInterface $attributeAsLabel)
+    public function setAttributeAsLabel(array $attributes)
     {
-        $this->attributeAsLabel = $attributeAsLabel;
+        $this->attributeAsLabel = $attributes;
     }
 
     /**
@@ -606,7 +609,7 @@ class Family implements FamilyInterface
                     $attribute->mergeConfiguration($attributeConfig);
                 }
             } else {
-                // If attribute doesn't exists, create it locally
+                // If attribute doesn't exist, create it locally
                 $attribute = $attributeRegistry->createAttribute($attributeCode, $attributeConfig);
             }
             $this->addAttribute($attribute);

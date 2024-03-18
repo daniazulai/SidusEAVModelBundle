@@ -19,7 +19,7 @@ use Sidus\EAVModelBundle\Entity\ValueInterface;
 use Sidus\EAVModelBundle\Entity\ValueRepository;
 use Sidus\EAVModelBundle\Model\AttributeInterface;
 use Sidus\EAVModelBundle\Translator\TranslatableTrait;
-use Sidus\EAVModelBundle\BaseBundle\Validator\Mapping\Loader\BaseLoader;
+use Sidus\EAVModelBundle\Mapping\Loader\BaseLoader;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
